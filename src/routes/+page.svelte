@@ -105,3 +105,114 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	h1 {
+		font-family: 'peralta';
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	li {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	li span {
+		margin-right: 16px;
+	}
+
+	.gauge {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.bullet {
+		border-radius: 100%;
+		width: 16px;
+		height: 16px;
+		margin: 4px;
+		background-color: #fff59d;
+	}
+
+	.filled-bullet {
+		background-color: #fbc02d;
+	}
+
+	.header-text {
+		text-align: end;
+		flex: 1;
+		margin-right: 16px;
+	}
+
+	.readable-area {
+		display: flex;
+		flex-direction: column;
+		background-color: #ffffff;
+		margin: 0 15%;
+	}
+
+	.header {
+		padding: 16px;
+		display: flex;
+		flex: row;
+		align-items: center;
+		border-bottom: 2px solid black;
+		text-decoration: none;
+		color: #000000;
+	}
+
+	.content {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.content-column {
+		flex: 1;
+		margin-top: 16px;
+		padding: 0 16px 16px 16px;
+		background-color: #ffffff;
+	}
+
+	img {
+		width: 128px;
+		height: 128px;
+		border: 4px solid #000000;
+		border-radius: 100%;
+	}
+
+	.fa.fa-solid {
+		margin-right: 8px;
+	}
+
+	.section-title {
+		background-color: #ffeb3b;
+		border-left: 4px solid #fbc02d;
+		color: black;
+		padding: 8px 16px;
+		text-transform: UPPERCASE;
+		font-weight: 500;
+	}
+
+	i {
+		background-color: transparent;
+	}
+
+	@media (max-width: 600px) {
+		.header {
+			flex-direction: column-reverse;
+		}
+
+		.header-text {
+			text-align: center;
+		}
+
+		.content {
+			flex-direction: column;
+		}
+	}
+</style>
