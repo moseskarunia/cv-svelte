@@ -20,85 +20,79 @@
 	</a>
 
 	<div class="content">
-		<div class="content-column">
-			<Section iconData={user} title="Profile">
-				<p>
-					Hello, my name is Spongebob Squarepants and I'm passionate about creating the best
-					possible food. In my spare time, I like to catch jellyfishes with my trusty net.
-				</p>
-			</Section>
-			<br />
-			<Section iconData={book} title="Education">
-				<ul>
-					<li>
-						2011-2014
-						<br />
-						&emsp; Bikini Bottom High School
-					</li>
-					<li>
-						2014-2018
-						<br />
-						&emsp; New Kelp City Culinary College
-					</li>
-				</ul>
-			</Section>
-		</div>
-		<div class="content-column">
-			<Section iconData={briefcase} title="Work History">
-				<ul>
-					<li>
-						Head Cook (2022 - ongoing)
-						<br />
-						&emsp; Krusty Krab, Inc.
-					</li>
-					<li>
-						Marketing Associate (2020 - 2022)
-						<br />
-						&emsp; Chum Bucket Ltd.
-					</li>
-					<li>
-						Jellyfish Catcher (2018 - 2020)
-						<br />
-						&emsp; Freelance
-					</li>
-				</ul>
-			</Section>
-			<br />
-			<Section iconData={cogs} title="Skills">
-				<ul>
-					<li>
-						<span>Jellyfish Hunting</span>
-						<div class="gauge">
-							<div class="bullet filled-bullet" />
-							<div class="bullet filled-bullet" />
-							<div class="bullet filled-bullet" />
-							<div class="bullet filled-bullet" />
-							<div class="bullet filled-bullet" />
-						</div>
-					</li>
-					<li>
-						<span>English</span>
-						<div class="gauge">
-							<div class="bullet filled-bullet" />
-							<div class="bullet filled-bullet" />
-							<div class="bullet filled-bullet" />
-							<div class="bullet filled-bullet" />
-							<div class="bullet" />
-						</div>
-					</li>
-					<li>
-						<span>Whale Singing</span>
-						<div class="gauge">
-							<div class="bullet filled-bullet" />
-							<div class="bullet filled-bullet" />
-							<div class="bullet filled-bullet" />
-							<div class="bullet" />
-							<div class="bullet" />
-						</div>
-					</li>
-				</ul>
-			</Section>
-		</div>
+		<Section iconData={user} title="Profile">
+			<p>
+				Hello, my name is Spongebob Squarepants and I'm passionate about creating the best possible
+				food. In my spare time, I like to catch jellyfishes with my trusty net.
+			</p>
+		</Section>
+		<Section iconData={book} title="Education">
+			<ul>
+				<li>
+					2011-2014
+					<br />
+					&emsp; Bikini Bottom High School
+				</li>
+				<li>
+					2014-2018
+					<br />
+					&emsp; New Kelp City Culinary College
+				</li>
+			</ul>
+		</Section>
+		<Section iconData={briefcase} title="Work History">
+			<ul>
+				<li>
+					Head Cook (2022 - ongoing)
+					<br />
+					&emsp; Krusty Krab, Inc.
+				</li>
+				<li>
+					Marketing Associate (2020 - 2022)
+					<br />
+					&emsp; Chum Bucket Ltd.
+				</li>
+				<li>
+					Jellyfish Catcher (2018 - 2020)
+					<br />
+					&emsp; Freelance
+				</li>
+			</ul>
+		</Section>
+		<Section iconData={cogs} title="Skills">
+			<ul>
+				<li>
+					<span>Jellyfish Hunting</span>
+					<div class="gauge">
+						<div class="bullet filled-bullet" />
+						<div class="bullet filled-bullet" />
+						<div class="bullet filled-bullet" />
+						<div class="bullet filled-bullet" />
+						<div class="bullet filled-bullet" />
+					</div>
+				</li>
+				<li>
+					<span>English</span>
+					<div class="gauge">
+						<div class="bullet filled-bullet" />
+						<div class="bullet filled-bullet" />
+						<div class="bullet filled-bullet" />
+						<div class="bullet filled-bullet" />
+						<div class="bullet" />
+					</div>
+				</li>
+				<li>
+					<span>Whale Singing</span>
+					<div class="gauge">
+						<div class="bullet filled-bullet" />
+						<div class="bullet filled-bullet" />
+						<div class="bullet filled-bullet" />
+						<div class="bullet" />
+						<div class="bullet" />
+					</div>
+				</li>
+			</ul>
+		</Section>
 	</div>
 </div>
 
@@ -150,6 +144,7 @@
 		flex-direction: column;
 		background-color: #ffffff;
 		margin: 0 15%;
+		height: 100%;
 	}
 
 	.header {
@@ -163,15 +158,10 @@
 	}
 
 	.content {
-		display: flex;
-		flex-direction: row;
-	}
-
-	.content-column {
-		flex: 1;
-		margin-top: 16px;
-		padding: 0 16px 16px 16px;
-		background-color: #ffffff;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 32px;
+		padding: 32px 32px;
 	}
 
 	img {
@@ -191,7 +181,7 @@
 		}
 
 		.content {
-			flex-direction: column;
+			grid-template-columns: repeat(1, minmax(0, 1fr));
 		}
 	}
 </style>
