@@ -1,3 +1,11 @@
+<script lang="ts">
+	import Icon from 'svelte-awesome';
+	import user from 'svelte-awesome/icons/user';
+	import book from 'svelte-awesome/icons/book';
+	import briefcase from 'svelte-awesome/icons/briefcase';
+	import cogs from 'svelte-awesome/icons/cogs';
+</script>
+
 <div class="readable-area">
 	<a class="header" href="./photo.html">
 		<div class="header-text">
@@ -14,7 +22,7 @@
 	<div class="content">
 		<div class="content-column">
 			<div class="section-title">
-				<i class="fa fa-solid fa-user" />
+				<Icon data={user} />
 				Profile
 			</div>
 			<br />
@@ -24,7 +32,7 @@
 			</p>
 			<br />
 			<div class="section-title">
-				<i class="fa fa-solid fa-book" />
+				<Icon data={book} />
 				Education
 			</div>
 			<br />
@@ -43,7 +51,7 @@
 		</div>
 		<div class="content-column">
 			<div class="section-title">
-				<i class="fa fa-solid fa-briefcase" />
+				<Icon data={briefcase} />
 				Work History
 			</div>
 			<br />
@@ -66,7 +74,7 @@
 			</ul>
 			<br />
 			<div class="section-title">
-				<i class="fa fa-solid fa-wand-sparkles" />
+				<Icon data={cogs} />
 				Skills
 			</div>
 			<br />
@@ -185,21 +193,16 @@
 		border-radius: 100%;
 	}
 
-	.fa.fa-solid {
-		margin-right: 8px;
-	}
-
 	.section-title {
+		display: flex;
+		align-items: center;
+		gap: 16px;
 		background-color: #ffeb3b;
 		border-left: 4px solid #fbc02d;
 		color: black;
 		padding: 8px 16px;
 		text-transform: UPPERCASE;
 		font-weight: 500;
-	}
-
-	i {
-		background-color: transparent;
 	}
 
 	@media (max-width: 600px) {
