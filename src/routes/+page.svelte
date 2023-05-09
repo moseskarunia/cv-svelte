@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Icon from 'svelte-awesome';
-	import user from 'svelte-awesome/icons/user';
+	import Section from '$components/Section.svelte';
 	import book from 'svelte-awesome/icons/book';
 	import briefcase from 'svelte-awesome/icons/briefcase';
 	import cogs from 'svelte-awesome/icons/cogs';
+	import user from 'svelte-awesome/icons/user';
 </script>
 
 <div class="readable-area">
@@ -21,95 +21,83 @@
 
 	<div class="content">
 		<div class="content-column">
-			<div class="section-title">
-				<Icon data={user} />
-				Profile
-			</div>
+			<Section iconData={user} title="Profile">
+				<p>
+					Hello, my name is Spongebob Squarepants and I'm passionate about creating the best
+					possible food. In my spare time, I like to catch jellyfishes with my trusty net.
+				</p>
+			</Section>
 			<br />
-			<p>
-				Hello, my name is Spongebob Squarepants and I'm passionate about creating the best possible
-				food. In my spare time, I like to catch jellyfishes with my trusty net.
-			</p>
-			<br />
-			<div class="section-title">
-				<Icon data={book} />
-				Education
-			</div>
-			<br />
-			<ul>
-				<li>
-					2011-2014
-					<br />
-					&emsp; Bikini Bottom High School
-				</li>
-				<li>
-					2014-2018
-					<br />
-					&emsp; New Kelp City Culinary College
-				</li>
-			</ul>
+			<Section iconData={book} title="Education">
+				<ul>
+					<li>
+						2011-2014
+						<br />
+						&emsp; Bikini Bottom High School
+					</li>
+					<li>
+						2014-2018
+						<br />
+						&emsp; New Kelp City Culinary College
+					</li>
+				</ul>
+			</Section>
 		</div>
 		<div class="content-column">
-			<div class="section-title">
-				<Icon data={briefcase} />
-				Work History
-			</div>
+			<Section iconData={briefcase} title="Work History">
+				<ul>
+					<li>
+						Head Cook (2022 - ongoing)
+						<br />
+						&emsp; Krusty Krab, Inc.
+					</li>
+					<li>
+						Marketing Associate (2020 - 2022)
+						<br />
+						&emsp; Chum Bucket Ltd.
+					</li>
+					<li>
+						Jellyfish Catcher (2018 - 2020)
+						<br />
+						&emsp; Freelance
+					</li>
+				</ul>
+			</Section>
 			<br />
-			<ul>
-				<li>
-					Head Cook (2022 - ongoing)
-					<br />
-					&emsp; Krusty Krab, Inc.
-				</li>
-				<li>
-					Marketing Associate (2020 - 2022)
-					<br />
-					&emsp; Chum Bucket Ltd.
-				</li>
-				<li>
-					Jellyfish Catcher (2018 - 2020)
-					<br />
-					&emsp; Freelance
-				</li>
-			</ul>
-			<br />
-			<div class="section-title">
-				<Icon data={cogs} />
-				Skills
-			</div>
-			<br />
-			<ul>
-				<li>
-					<span>Jellyfish Hunting</span>
-					<div class="gauge">
-						<div class="bullet filled-bullet" />
-						<div class="bullet filled-bullet" />
-						<div class="bullet filled-bullet" />
-						<div class="bullet filled-bullet" />
-						<div class="bullet filled-bullet" />
-					</div>
-				</li>
-				<li>
-					<span>English</span>
-					<div class="gauge">
-						<div class="bullet filled-bullet" />
-						<div class="bullet filled-bullet" />
-						<div class="bullet filled-bullet" />
-						<div class="bullet filled-bullet" />
-						<div class="bullet" />
-					</div>
-				</li>
-				<li>
-					<span>Whale Singing</span>
-					<div class="gauge">
-						<div class="bullet filled-bullet" />
-						<div class="bullet filled-bullet" />
-						<div class="bullet filled-bullet" />
-						<div class="bullet" />
-						<div class="bullet" />
-					</div>
-				</li>
-			</ul>
+			<Section iconData={cogs} title="Skills">
+				<ul>
+					<li>
+						<span>Jellyfish Hunting</span>
+						<div class="gauge">
+							<div class="bullet filled-bullet" />
+							<div class="bullet filled-bullet" />
+							<div class="bullet filled-bullet" />
+							<div class="bullet filled-bullet" />
+							<div class="bullet filled-bullet" />
+						</div>
+					</li>
+					<li>
+						<span>English</span>
+						<div class="gauge">
+							<div class="bullet filled-bullet" />
+							<div class="bullet filled-bullet" />
+							<div class="bullet filled-bullet" />
+							<div class="bullet filled-bullet" />
+							<div class="bullet" />
+						</div>
+					</li>
+					<li>
+						<span>Whale Singing</span>
+						<div class="gauge">
+							<div class="bullet filled-bullet" />
+							<div class="bullet filled-bullet" />
+							<div class="bullet filled-bullet" />
+							<div class="bullet" />
+							<div class="bullet" />
+						</div>
+					</li>
+				</ul>
+			</Section>
 		</div>
 	</div>
 </div>
@@ -191,18 +179,6 @@
 		height: 128px;
 		border: 4px solid #000000;
 		border-radius: 100%;
-	}
-
-	.section-title {
-		display: flex;
-		align-items: center;
-		gap: 16px;
-		background-color: #ffeb3b;
-		border-left: 4px solid #fbc02d;
-		color: black;
-		padding: 8px 16px;
-		text-transform: UPPERCASE;
-		font-weight: 500;
 	}
 
 	@media (max-width: 600px) {
