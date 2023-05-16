@@ -7,7 +7,7 @@
 </script>
 
 <div class="readable-area">
-	<a class="header" href="./photo.html">
+	<a class="header" href="/secondRoute">
 		<div class="header-text">
 			<h1>Squarepants, Spongebob</h1>
 			<p>Head Chef</p>
